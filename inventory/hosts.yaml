@@ -1,8 +1,8 @@
 all:
   children:
-    hosts:
-      main:
-        ansible_host: "{{ lookup('env', 'REMOTE_HOST') }}"
-        ansible_port: "{{ lookup('env', 'REMOTE_PORT') }}"
-        ansible_user: "{{ lookup('env', 'REMOTE_USER') }}"
-        ansible_become: yes
+    workstation:
+      hosts:
+        main:
+          ansible_host: "{{ lookup('env', 'REMOTE_HOST') }}"
+          ansible_port: "{{ lookup('env', 'REMOTE_PORT') }}"
+          ansible_user: "{{ lookup('env', 'REMOTE_USER') }}"

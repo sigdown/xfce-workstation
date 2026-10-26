@@ -1,0 +1,6 @@
+- name: Install XFCE desktop and Xorg
+  become: yes
+  ansible.builtin.apt:
+    name: "{{ desktop_packages }}"
+    state: present
+    update_cache: true

@@ -1,0 +1,5 @@
+- name: Configure desktop
+  hosts: workstation
+  become: yes
+  roles:
+    - desktop
