@@ -1,0 +1,11 @@
+- name: Install RDP server packages
+  ansible.builtin.apt:
+    name: "{{ rdp_packages }}"
+    state: present
+    update_cache: yes
+    
+- name: Enable xrdp daemon
+  ansible.builtin.service:
+    name: xrdp
+    enabled: true
+    state: started

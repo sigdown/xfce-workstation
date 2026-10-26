@@ -1,0 +1,3 @@
+rdp_packages:
+  - xrdp
+  - xorgxrdp
