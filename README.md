@@ -29,7 +29,7 @@ cd ~
 ```bash
 mkdir -p ~/.ssh && cd ~/.ssh
 
-vi authorized_keys
+vi authorized_keys # you can use nano
 ```
 
 4. Remove sudo password if you have one
@@ -39,5 +39,25 @@ sudo EDITOR=vi visudo
 ```
 
 Now sudo user is ready.
+
+5. Add your server to hosts.yaml
+
+```bash
+cp .env.example .env
+
+vi env
+
+set -a
+
+source .env
+
+set +a
+```
+
+5. Roll Ansible playbook
+
+```bash
+ansible-playbook playbooks/site.yaml
+```
 
 ## Using Ansible
