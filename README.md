@@ -54,10 +54,10 @@ source .env
 set +a
 ```
 
-5. Roll Ansible playbook
+## Using Ansible
+
+1. Roll Ansible playbook
 
 ```bash
 ansible-playbook playbooks/site.yaml
 ```
-
-## Using Ansible
